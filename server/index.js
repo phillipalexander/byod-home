@@ -43,7 +43,11 @@ app.get('/', function (req, res) {
 app.use(
   '/static',
   function (req, res, next) {
-    if ( ! req.path.match(/bundle\.js(\.map)?$/) && ! req.path.match(/\.css$/) ) {
+    if (
+      ! req.path.match(/bundle\.js(\.map)?$/) &&
+      ! req.path.match(/\.css$/) &&
+      ! req.path.match(/^\/img\//)
+    ) {
       return res.sendStatus(404)
     }
     next()

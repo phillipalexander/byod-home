@@ -3593,3 +3593,35 @@ a.text-error:hover {
   word-break: break-word;
   word-wrap: break-word;
 }
+
+/**
+ * Custom additions
+ */
+html, body {
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+/* Max-widths */
+.mw-med {
+  max-width: 32rem;
+}
+
+/* Overrides */
+.mb-0 { margin-bottom: 0 !important; }
+.ml-0 { margin-left: 0 !important; }
+.mr-0 { margin-right: 0 !important; }
+.mt-0 { margin-top: 0 !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pl-0 { padding-left: 0 !important; }
+.pr-0 { padding-right: 0 !important; }
+.pt-0 { padding-top: 0 !important; }
