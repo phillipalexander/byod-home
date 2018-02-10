@@ -1,0 +1,4 @@
+node_modules/
+client/pages/*.bundle.js
+client/pages/*.bundle.js.map
+.DS_Store

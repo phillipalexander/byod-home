@@ -1,0 +1,39 @@
+{
+  "name": "byod",
+  "version": "1.0.0",
+  "description": "Bring Your Own Data (BYOD) to the next generation of apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "clean": "rm client/pages/*.bundle.js client/pages/*.bundle.js.map",
+    "watch-assets": "rollup -c -w",
+    "watch": "nodemon server/index.js --watch server",
+    "dev": "npm-run-all --parallel watch watch-assets",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mithril": "^1.1.6",
+    "oauth2orize": "^1.11.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "passport-oauth2-client-password": "^0.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12",
+    "npm-run-all": "^4.1.2",
+    "rollup": "^0.55.4",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}

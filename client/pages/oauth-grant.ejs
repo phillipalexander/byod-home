@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Grant Access | BYOD</title>
+<link rel="stylesheet" type="text/css" href="/static/style/spectre.css">
+
+<div id="app"></div>
+<script>
+window.oauthData = {
+  transactionID: '<%= transactionID %>',
+  user: '<%= user %>',
+  client: '<%= client %>',
+}
+</script>
+<script src="/static/pages/oauth-grant.bundle.js"></script>
