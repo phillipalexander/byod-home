@@ -23,6 +23,8 @@ app.use(session({ // TODO: https://github.com/rawberg/connect-sqlite3
   cookie: { secure: isProd }
 }))
 
+app.use( require('body-parser').json() )
+
 app.use(passport.initialize())
 app.use(passport.session())
 

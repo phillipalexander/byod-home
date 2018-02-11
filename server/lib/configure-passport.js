@@ -12,21 +12,28 @@ var AccessToken = require('../models/access-token')
 /**
  * LocalStrategy
  *
- * This strategy is used to authenticate users based on a username and password.
+ * This strategy is used to authenticate users based on a email and password.
  * Anytime a request is made to authorize an application, we must ensure that
  * a user is logged in before asking them to approve the request.
  */
-passport.use(new LocalStrategy(function (username, password, done) {
-  User.findByUsername(username).then(
-    function (user) {
-      if (user.password !== password) return done(null, false)
-      done(null, user)
-    },
-    function (err) {
-      done(err)
-    }
-  )
-}))
+passport.use(new LocalStrategy(
+  {
+    usernameField: 'email',
+    passwordField: 'password',
+  },
+  function (email, password, done) {
+    console.log(new Date(), "Signing in", email, password)
+    User.findByEmail(email).then(
+      function (user) {
+        if (user.password !== password) return done(null, false)
+        done(null, user)
+      },
+      function (err) {
+        done(err)
+      }
+    )
+  }
+))
 
 passport.serializeUser(function (user, done) {
   done(null, user.id)
