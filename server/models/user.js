@@ -2,7 +2,7 @@ var utils = require('oauth2orize/lib/utils')
 
 
 var store = [
-  { id: utils.uid(16), email: 'a@b.com', password: '123' }
+  { id: utils.uid(16), name: 'Alice', email: 'a@b.com', password: '123' }
 ]
 
 exports.find = function (id) {

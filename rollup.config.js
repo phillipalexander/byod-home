@@ -26,4 +26,5 @@ export default pages.map( page => ({
     sourcemap: true,
   },
   plugins: plugins,
+  // experimentalDynamicImport: true, // Maybe one day
 }))

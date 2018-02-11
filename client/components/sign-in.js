@@ -4,8 +4,8 @@ import m from 'mithril'
 // Since there won't be multiple signin components at one time
 // we can keep things simple and use plain vars, thanks to mithril.
 //
-var email = ''
-var password = ''
+var email = ''    || 'a@b.com' // prototype
+var password = '' || '123' // prototype
 var errorMsg = null
 
 async function submit (e) {

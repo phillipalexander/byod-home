@@ -4,7 +4,7 @@ import SignInForm from '../components/sign-in'
 
 m.mount(document.getElementById('app'), {
   view: () =>
-    m('.flex-centered.fill',
+    m('.flex-centered.fullscreen',
       m(SignInForm)
     )
 })

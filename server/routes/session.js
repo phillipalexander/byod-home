@@ -1,5 +1,6 @@
 var API = require('../lib/api-helpers')
 var passport = require('passport')
+var gravatar = require('../lib/gravatar')
 
 
 var router = module.exports = require('express').Router()
@@ -9,7 +10,10 @@ router.get('/sign-in', API.ensureSignedOut(), function(req, res) {
 })
 
 router.get('/me', API.auth, function (req, res) {
-  res.send(req.user)
+  var payload = Object.assign({}, req.user, {
+    avatar_url: gravatar.getUrl(req.user.email)
+  })
+  res.send(payload)
 })
 
 router.post('/',
