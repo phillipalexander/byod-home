@@ -1,6 +1,6 @@
 {
   "name": "byod",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Bring Your Own Data (BYOD) to the next generation of apps.",
   "main": "index.js",
   "scripts": {
